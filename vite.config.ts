@@ -23,7 +23,7 @@ function serveLandingPages(): Plugin {
 }
 
 export default defineConfig(() => {
-  return {
+  return {base: '/Elias-Baram-Juel-Andersens-portfolio1/',
     plugins: [react(), tailwindcss(), serveLandingPages()],
     resolve: {
       alias: {
