@@ -1,0 +1,188 @@
+@font-face {
+  font-display: block;
+  font-family: Mori;
+  font-weight: 400;
+  src: url("https://assets.codepen.io/16327/PPMori-Regular.woff") format("woff");
+}
+@font-face {
+  font-display: block;
+  font-family: Mori;
+  font-weight: 600;
+  src: url("https://assets.codepen.io/16327/PPMori-SemiBold.woff") format("woff");
+}
+@font-face {
+  font-display: block;
+  font-family: "Fraktion Mono";
+  font-weight: 400;
+  src: url("https://assets.codepen.io/16327/PPFraktionMono-Bold.woff") format("woff");
+}
+
+:root {
+  --accent: #C4A482;
+  --green: #C4A482;
+  --lt: #e2cca8;
+  --light: #e2cca8;
+  --black: #0e100f;
+  --dark: #0e100f;
+  --white: #fffce1;
+  --s75: #bbbaa6;
+  --s50: #7c7c6f;
+  --s25: #42433d;
+  --color-surface50: #7c7c6f;
+  --color-surface25: #42433d;
+  --color-surface75: #bbbaa6;
+  --color-surface-white: #fffce1;
+  --color-grey-dark: #1b1d1c;
+  --gradient-macha: linear-gradient(135deg, #0ae448 0%, #abff84 100%);
+}
+
+/* ─── FAB Wrapper ─── */
+.fab-wrap {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  z-index: 50;
+  pointer-events: auto;
+}
+
+@media (min-width: 1101px) {
+  .fab-wrap {
+    right: 84px;
+  }
+}
+
+/* ─── Main FAB Button ─── */
+#fabBtn,
+.fab {
+  width: 72px;
+  height: 72px;
+  border-radius: 99px;
+  border: none;
+  background: #C4A482;
+  background-color: #C4A482;
+  color: var(--dark);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 8px 30px rgba(196, 164, 130, 0.35);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+#fabBtn:hover,
+.fab:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 36px rgba(196, 164, 130, 0.45);
+}
+
+#fabBtn:active,
+.fab:active {
+  transform: scale(0.95);
+}
+
+#fabBtn:focus-visible,
+.fab:focus-visible {
+  outline: 2px solid #C4A482;
+  outline-offset: 3px;
+}
+
+.fab svg {
+  width: 28px;
+  height: 28px;
+  display: block;
+}
+
+/* ─── Radial Action Item ─── */
+.fab-item {
+  position: absolute;
+  bottom: 13px;
+  right: 13px;
+  width: 46px;
+  height: 46px;
+  border-radius: 99px;
+  border: 1px solid var(--color-surface25);
+  background: var(--color-grey-dark);
+  color: var(--color-surface75);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: scale(0);
+  padding: 0;
+  z-index: 1;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.fab-item:hover {
+  background: #252826;
+  color: #C4A482;
+  border-color: #C4A482;
+  box-shadow: 0 0 16px rgba(196, 164, 130, 0.45), 0 6px 20px rgba(196, 164, 130, 0.35);
+}
+
+.fab-item:focus-visible {
+  outline: 2px solid #C4A482;
+  outline-offset: 2px;
+}
+
+.fab-item svg {
+  width: 19px;
+  height: 19px;
+  pointer-events: none;
+}
+
+/* Hover Tooltip showing action title */
+.fab-item::after {
+  content: attr(title);
+  position: absolute;
+  right: calc(100% + 10px);
+  background: rgba(14, 16, 15, 0.92);
+  color: var(--white);
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-family: Mori, ui-sans-serif, system-ui, -apple-system, sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateX(6px);
+  transition: opacity 0.15s ease, transform 0.15s ease;
+  border: 1px solid rgba(255, 252, 225, 0.12);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+}
+
+.fab-item:hover::after {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@media (max-width: 640px) {
+  .fab-wrap {
+    bottom: 24px;
+    right: 24px;
+  }
+  .fab {
+    width: 64px;
+    height: 64px;
+  }
+  .fab svg {
+    width: 24px;
+    height: 24px;
+  }
+  .fab-item {
+    width: 42px;
+    height: 42px;
+    bottom: 11px;
+    right: 11px;
+  }
+  .fab-item svg {
+    width: 17px;
+    height: 17px;
+  }
+}

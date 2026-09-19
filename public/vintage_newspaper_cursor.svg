@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="36" height="42" viewBox="0 0 92 118" fill="none">
+  <defs>
+    <!-- Vintage Ink Line Color -->
+    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3a2e2b" />
+      <stop offset="100%" stop-color="#231a18" />
+    </linearGradient>
+
+    <!-- Newspaper Column Text Pattern -->
+    <pattern id="newspaperText" width="40" height="40" patternUnits="userSpaceOnUse" patternTransform="rotate(-15)">
+      <!-- Mini Newspaper Headline -->
+      <rect x="2" y="2" width="36" height="3" fill="#2b2321" opacity="0.85" />
+      
+      <!-- Column 1 Lines -->
+      <line x1="2" y1="8" x2="18" y2="8" stroke="#3a2e2b" stroke-width="1" stroke-dasharray="2 1 4 1 2" opacity="0.75" />
+      <line x1="2" y1="11" x2="18" y2="11" stroke="#3a2e2b" stroke-width="1" stroke-dasharray="3 1 2 1" opacity="0.75" />
+      <line x1="2" y1="14" x2="18" y2="14" stroke="#3a2e2b" stroke-width="1" stroke-dasharray="1 1 5 1" opacity="0.75" />
+      <line x1="2" y1="17" x2="18" y2="17" stroke="#3a2e2b" stroke-width="1" stroke-dasharray="4 1 2 1" opacity="0.75" />
+      <line x1="2" y1="20" x2="18" y2="20" stroke="#3a2e2b" stroke-width="1" stroke-dasharray="2 1 3 1" opacity="0.75" />
+      <line x1="2" y1="23" x2="18" y2="23" stroke="#3a2e2b" stroke-width="1" stroke-dasharray="3 1 1 1" opacity="0.75" />
+
+      <!-- Column Divider -->
+      <line x1="20" y1="7" x2="20" y2="38" stroke="#3a2e2b" stroke-width="0.5" opacity="0.4" />
+
+      <!-- Column 2 Lines -->
+      <line x1="22" y1="8" x2="38" y2="8" stroke="#3a2e2b" stroke-width="1" stroke-dasharray="3 1 2 1" opacity="0.75" />
+      <line x1="22" y1="11" x2="38" y2="11" stroke="#3a2e2b" stroke-width="1" stroke-dasharray="1 1 4 1" opacity="0.75" />
+      <line x1="22" y1="14" x2="38" y2="14" stroke="#3a2e2b" stroke-width="1" stroke-dasharray="4 1 1 1" opacity="0.75" />
+      <line x1="22" y1="17" x2="38" y2="17" stroke="#3a2e2b" stroke-width="1" stroke-dasharray="2 1 3 1" opacity="0.75" />
+      <line x1="22" y1="20" x2="38" y2="20" stroke="#3a2e2b" stroke-width="1" stroke-dasharray="3 1 2 1" opacity="0.75" />
+      <line x1="22" y1="23" x2="38" y2="23" stroke="#3a2e2b" stroke-width="1" stroke-dasharray="1 1 4 1" opacity="0.75" />
+
+      <!-- Sub-headline -->
+      <rect x="2" y="27" width="36" height="2" fill="#2b2321" opacity="0.7" />
+
+      <!-- Bottom Column 1 -->
+      <line x1="2" y1="31" x2="18" y2="31" stroke="#3a2e2b" stroke-width="1" stroke-dasharray="2 1 3 1" opacity="0.75" />
+      <line x1="2" y1="34" x2="18" y2="34" stroke="#3a2e2b" stroke-width="1" stroke-dasharray="4 1 1 1" opacity="0.75" />
+      
+      <!-- Bottom Column 2 -->
+      <line x1="22" y1="31" x2="38" y2="31" stroke="#3a2e2b" stroke-width="1" stroke-dasharray="3 1 2 1" opacity="0.75" />
+      <line x1="22" y1="34" x2="38" y2="34" stroke="#3a2e2b" stroke-width="1" stroke-dasharray="1 1 3 1" opacity="0.75" />
+    </pattern>
+
+    <!-- Drop Shadow for Vintage Depth -->
+    <filter id="vintageShadow" x="-20%" y="-20%" width="150%" height="150%">
+      <feDropShadow dx="2" dy="3" stdDeviation="2" flood-color="#1a120b" flood-opacity="0.45" />
+    </filter>
+  </defs>
+
+  <!-- Offset to put tip (10, 10) exactly at (1, 1) hotspot -->
+  <g transform="translate(-9, -9)">
+    <!-- Base Aged Newsprint Paper Background -->
+    <path d="M 10 10 L 85 55 L 50 65 L 68 105 L 48 112 L 32 70 L 10 88 Z" 
+          fill="#edd6b1" 
+          stroke="url(#borderGrad)" 
+          stroke-width="1.8" 
+          stroke-linejoin="round"
+          filter="url(#vintageShadow)" />
+
+    <!-- Newspaper Print Overlay -->
+    <path d="M 10 10 L 85 55 L 50 65 L 68 105 L 48 112 L 32 70 L 10 88 Z" 
+          fill="url(#newspaperText)" 
+          opacity="0.9" />
+
+    <!-- Engraving / Architectural Illustration Box in Lower Right Wing -->
+    <g transform="translate(42, 38) rotate(-10) scale(0.65)">
+      <!-- Illustration Border -->
+      <rect x="0" y="0" width="30" height="25" fill="#e2d2aa" stroke="#3a2e2b" stroke-width="1.5" />
+      <!-- Engraving Hatching Lines (Classical Building Motif) -->
+      <line x1="5" y1="20" x2="5" y2="8" stroke="#3a2e2b" stroke-width="1" />
+      <line x1="10" y1="20" x2="10" y2="8" stroke="#3a2e2b" stroke-width="1" />
+      <line x1="15" y1="20" x2="15" y2="8" stroke="#3a2e2b" stroke-width="1" />
+      <line x1="20" y1="20" x2="20" y2="8" stroke="#3a2e2b" stroke-width="1" />
+      <line x1="25" y1="20" x2="25" y2="8" stroke="#3a2e2b" stroke-width="1" />
+      <!-- Roof pediment -->
+      <polygon points="3,8 15,2 27,8" fill="none" stroke="#3a2e2b" stroke-width="1.2" />
+      <line x1="3" y1="20" x2="27" y2="20" stroke="#3a2e2b" stroke-width="1.5" />
+    </g>
+
+    <!-- Vintage Aging Inner Vignette Border -->
+    <path d="M 10 10 L 85 55 L 50 65 L 68 105 L 48 112 L 32 70 L 10 88 Z" 
+          fill="none" 
+          stroke="#5c4323" 
+          stroke-width="1.5" 
+          opacity="0.5" />
+  </g>
+</svg>

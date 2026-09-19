@@ -1,0 +1,53 @@
+.vertical-side-strip {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  height: 100vh;
+  width: 60px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 25;
+  pointer-events: auto;
+  user-select: none;
+  background: rgba(14, 16, 15, 0.45);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: opacity 0.3s ease;
+}
+
+.vertical-side-strip-left {
+  left: 0;
+  border-right: 1px solid rgba(196, 164, 130, 0.28);
+  box-shadow: 4px 0 24px rgba(0, 0, 0, 0.4);
+}
+
+.vertical-side-strip-right {
+  right: 0;
+  border-left: 1px solid rgba(196, 164, 130, 0.28);
+  box-shadow: -4px 0 24px rgba(0, 0, 0, 0.4);
+}
+
+.vertical-strip-rotator-left {
+  width: 140vh;
+  min-width: 900px;
+  flex-shrink: 0;
+  transform: rotate(-90deg);
+  transform-origin: center center;
+}
+
+.vertical-strip-rotator-right {
+  width: 140vh;
+  min-width: 900px;
+  flex-shrink: 0;
+  transform: rotate(90deg);
+  transform-origin: center center;
+}
+
+/* Hide on screens narrower than 1100px so 3D book stage has full room */
+@media (max-width: 1100px) {
+  .vertical-side-strip {
+    display: none !important;
+  }
+}

@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elias Baram Juel Andersen's portfolio</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta name="description" content="Elias Baram Juel Andersen's portfolio featuring interactive 3D showcase, editorial layout, and motion." />
+    <meta property="og:title" content="Elias Baram Juel Andersen's portfolio" />
+    <meta property="og:description" content="Elias Baram Juel Andersen's portfolio featuring interactive 3D showcase, editorial layout, and motion." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <script>
+      (function () {
+        const originalTitle = "Elias Baram Juel Andersen's portfolio";
+        const awayTitle = "Coffee☕?";
+
+        window.addEventListener("blur", () => {
+          document.title = awayTitle;
+        });
+
+        window.addEventListener("focus", () => {
+          document.title = originalTitle;
+        });
+
+        document.addEventListener("visibilitychange", () => {
+          if (document.hidden) {
+            document.title = awayTitle;
+          } else {
+            document.title = originalTitle;
+          }
+        });
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
